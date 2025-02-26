@@ -227,6 +227,14 @@ a:focus,
   margin-top: 0;
   margin-bottom: 10px;
 }
+
+@media (max-width: 768px) {
+  .intro h1 {
+    font-size: 38px;
+  }
+}
+
+
 .intro h1 span {
   font-weight: 800;
   color: #5ca9fb;
