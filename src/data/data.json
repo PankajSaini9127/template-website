@@ -1,0 +1,186 @@
+{
+"Header": {
+  "title": "Innovative Development Solutions",
+  "paragraph": "We craft high-performance software, mobile apps, and web solutions tailored to your business needs. Scalable, secure, and built for the future."
+}
+,
+"About": {  
+    "paragraph": "We are a forward-thinking development company committed to building high-quality software solutions tailored to your business needs. Our team specializes in creating scalable, secure, and innovative applications that drive digital transformation. From web and mobile development to custom software solutions, we empower businesses with cutting-edge technology.",  
+    "Why": [  
+        "Expertise in modern technologies",  
+        "Custom software solutions",  
+        "Scalable and secure development",  
+        "Agile and efficient processes"  
+    ],  
+    "Why2": [  
+        "User-centric approach",  
+        "Seamless integration capabilities",  
+        "Commitment to quality and performance",  
+        "Continuous innovation and support"  
+    ]  
+},
+  "Gallery": [
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/01-large.jpg",
+      "smallImage": "img/portfolio/01-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/02-large.jpg",
+      "smallImage": "img/portfolio/02-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/03-large.jpg",
+      "smallImage": "img/portfolio/03-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/04-large.jpg",
+      "smallImage": "img/portfolio/04-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/05-large.jpg",
+      "smallImage": "img/portfolio/05-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/06-large.jpg",
+      "smallImage": "img/portfolio/06-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/07-large.jpg",
+      "smallImage": "img/portfolio/07-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/08-large.jpg",
+      "smallImage": "img/portfolio/08-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/09-large.jpg",
+      "smallImage": "img/portfolio/09-small.jpg"
+    }
+  ],
+"Services": [
+    {
+      "icon": "fa fa-code",
+      "name": "Custom Software Development",
+      "text": "We design and develop tailored software solutions that align with your business needs, ensuring scalability, security, and performance."
+    },
+    {
+      "icon": "fa fa-mobile",
+      "name": "Mobile App Development",
+      "text": "Our team specializes in building high-performance iOS and Android applications with seamless user experiences and modern features."
+    },
+    {
+      "icon": "fa fa-globe",
+      "name": "Web Development",
+      "text": "From responsive websites to complex web applications, we create powerful and intuitive web solutions using the latest technologies."
+    },
+    {
+      "icon": "fa fa-cloud",
+      "name": "Cloud Solutions",
+      "text": "We help businesses leverage cloud computing with scalable, cost-effective, and secure cloud-based applications and infrastructure."
+    },
+    {
+      "icon": "fa fa-cogs",
+      "name": "API & System Integration",
+      "text": "We develop and integrate APIs to ensure seamless connectivity between different systems, enhancing business efficiency and automation."
+    },
+    {
+      "icon": "fa fa-shield",
+      "name": "Cybersecurity & Compliance",
+      "text": "Our team ensures your digital assets are protected with robust security measures and compliance with industry standards."
+    }
+]
+,
+  "Testimonials": [
+    {
+      "img": "img/testimonials/01.jpg",
+      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
+      "name": "John Doe"
+    },
+    {
+      "img": "img/testimonials/02.jpg",
+      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
+      "name": "Johnathan Doe"
+    },
+    {
+      "img": "img/testimonials/03.jpg",
+      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
+      "name": "John Doe"
+    },
+    {
+      "img": "img/testimonials/04.jpg",
+      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
+      "name": "Johnathan Doe"
+    },
+    {
+      "img": "img/testimonials/05.jpg",
+      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
+      "name": "John Doe"
+    },
+    {
+      "img": "img/testimonials/06.jpg",
+      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
+      "name": "Johnathan Doe"
+    }
+  ],
+  "Team": [
+    {
+      "img": "img/team/01.jpg",
+      "name": "John Doe",
+      "job": "Director"
+    },
+    {
+      "img": "img/team/02.jpg",
+      "name": "Mike Doe",
+      "job": "Senior Designer"
+    },
+    {
+      "img": "img/team/03.jpg",
+      "name": "Jane Doe",
+      "job": "Senior Designer"
+    },
+    {
+      "img": "img/team/04.jpg",
+      "name": "Karen Doe",
+      "job": "Project Manager"
+    }
+  ],
+  "Contact": {
+    "address": "4321 California St, San Francisco, CA 12345 ",
+    "phone": "+1 123 456 1234",
+    "email": "info@company.com",
+    "facebook": "fb.com",
+    "twitter": "twitter.com",
+    "youtube": "youtube.com"
+  },
+  "Features": [
+    {
+      "icon": "fa fa-code",
+      "title": "Custom Web Development",
+      "text": "Tailor-made web applications with the latest technologies like React, Angular, and Vue."
+    },
+    {
+      "icon": "fa fa-paint-brush",
+      "title": "Responsive UI/UX Design",
+      "text": "Beautiful and intuitive designs that provide an optimal user experience across all devices."
+    },
+    {
+      "icon": "fa fa-rocket",
+      "title": "Performance Optimization",
+      "text": "Speed optimization techniques to enhance website performance and ensure fast load times."
+    },
+    {
+      "icon": "fa fa-shopping-cart",
+      "title": "E-commerce Solutions",
+      "text": "Secure and scalable e-commerce platforms with seamless payment gateway integration."
+    }
+  ]
+}
