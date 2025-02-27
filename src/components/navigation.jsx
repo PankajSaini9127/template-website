@@ -47,7 +47,11 @@ export const Navigation = () => {
   }, []);
 
   const toggleDrawer = (open) => (event) => {
-    if (event.type === "keydown" && (event.key === "Tab" || event.key === "Shift")) return;
+    if (
+      event.type === "keydown" &&
+      (event.key === "Tab" || event.key === "Shift")
+    )
+      return;
     setDrawerOpen(open);
   };
 
@@ -63,22 +67,35 @@ export const Navigation = () => {
       <AppBar
         position="fixed"
         sx={{
-          backgroundColor: scrolled ? theme.palette.background.paper : "transparent",
+          backgroundColor: scrolled
+            ? theme.palette.background.paper
+            : "transparent",
           boxShadow: scrolled ? theme.shadows[4] : "none",
           transition: "all 0.3s ease-in-out",
+          p:0
         }}
       >
         <Container maxWidth="lg">
-          <Toolbar sx={{ display: "flex", justifyContent: "space-between", py: 1 }}>
-            <Box sx={{ display: "flex", alignItems: "center" }}>
-              <svg width="100%" height="100" viewBox="0 0 300 100">
-                <text x="5" y="60" fontSize="30" fontWeight="bold" fill={theme.palette.primary.main}>Era</text>
-                <text x="60" y="60" fontSize="30" fontWeight="bold" fill={theme.palette.secondary.main}>Info</text>
-                <text x="120" y="60" fontSize="30" fontWeight="bold" fill={theme.palette.primary.main}>Solution</text>
-              </svg>
-            </Box>
+          <Toolbar
+            sx={{ display: "flex", justifyContent: "space-between", py: 0 }}
+          >
+            <Box
+              component="img"
+              src="/img/eralogo.png" // Change this to your actual image path
+              alt="Era Info Solution"
+              sx={{
+                width: { xs: "60px", lg: "100px" }, // Responsive width
+                height: "auto", // Maintain aspect ratio
+                // mb: 2, // Margin bottom like gutterBottom
+              }}
+            />
 
-            <IconButton edge="start" color="inherit" onClick={toggleDrawer(true)} sx={{ display: { md: "none" } }}>
+            <IconButton
+              edge="start"
+              color="inherit"
+              onClick={toggleDrawer(true)}
+              sx={{ display: { md: "none" } }}
+            >
               <MenuIcon />
             </IconButton>
 
@@ -111,14 +128,31 @@ export const Navigation = () => {
 
         <Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)}>
           <Box sx={{ py: 3, textAlign: "center" }}>
-            <Avatar sx={{ bgcolor: theme.palette.secondary.main, width: 50, height: 50 }}>YC</Avatar>
+            <Avatar
+              sx={{
+                bgcolor: theme.palette.secondary.main,
+                width: 50,
+                height: 50,
+              }}
+            >
+              YC
+            </Avatar>
           </Box>
           <Divider sx={{ mb: 2 }} />
           <List>
             {navItems.map((item) => (
-              <ListItem button key={item.label} component="a" href={item.href} onClick={toggleDrawer(false)}>
+              <ListItem
+                button
+                key={item.label}
+                component="a"
+                href={item.href}
+                onClick={toggleDrawer(false)}
+              >
                 <ListItemIcon>{item.icon}</ListItemIcon>
-                <ListItemText primary={item.label} primaryTypographyProps={{ fontWeight: "500" }} />
+                <ListItemText
+                  primary={item.label}
+                  primaryTypographyProps={{ fontWeight: "500" }}
+                />
               </ListItem>
             ))}
             <Box sx={{ mt: 2, px: 2 }}>

@@ -1,6 +1,25 @@
 import React from "react";
-import { Box, Container, Typography, useTheme, Grid, Link, IconButton, Divider } from "@mui/material";
-import { Facebook, Twitter, LinkedIn, Info, Work, Article, Help, ContactSupport, Policy } from "@mui/icons-material";
+import {
+  Box,
+  Container,
+  Typography,
+  useTheme,
+  Grid,
+  Link,
+  IconButton,
+  Divider,
+} from "@mui/material";
+import {
+  Facebook,
+  Twitter,
+  LinkedIn,
+  Info,
+  Work,
+  Article,
+  Help,
+  ContactSupport,
+  Policy,
+} from "@mui/icons-material";
 
 export const Footer = () => {
   const theme = useTheme();
@@ -9,7 +28,7 @@ export const Footer = () => {
     <Box
       component="footer"
       sx={{
-        py:  { xs: 10, md: 8 },
+        py: { xs: 10, md: 8 },
         backgroundColor: theme.palette.primary.dark,
         color: "white",
         textAlign: "center",
@@ -18,9 +37,16 @@ export const Footer = () => {
       <Container>
         <Grid container spacing={4} justifyContent="center">
           <Grid item xs={12} sm={8}>
-            <Typography variant="h6" fontWeight={600} gutterBottom sx={{fontSize: { xs: "1.5rem", lg:"2rem" }}}>
-              Era Info Solution
-            </Typography>
+            <Box
+              component="img"
+              src="/img/eralogo.png" // Change this to your actual image path
+              alt="Era Info Solution"
+              sx={{
+                width: { xs: "120px", lg: "180px" }, // Responsive width
+                height: "auto", // Maintain aspect ratio
+                mb: 2, // Margin bottom like gutterBottom
+              }}
+            />
             {/* <Box mt={1}>
               <Typography variant="body2" display="flex" alignItems="center" justifyContent="center" sx={{ mb: 1 ,fontSize: { xs: "1.5rem", lg:"2rem"}}}>
                 <Info fontSize="small" sx={{ mr: 1 }} /> About Us
@@ -50,25 +76,46 @@ export const Footer = () => {
             </Box>
           </Grid> */}
           <Grid item xs={12} sm={4}>
-            <Typography variant="h6" fontWeight={600} gutterBottom sx={{fontSize: { xs: "1.5rem", lg:"2rem" }}}>
+            <Typography
+              variant="h6"
+              fontWeight={600}
+              gutterBottom
+              sx={{ fontSize: { xs: "1.5rem", lg: "2rem" } }}
+            >
               Follow Us
             </Typography>
             <Box mt={1}>
-              <IconButton href="#" color="inherit" sx={{fontSize: { xs: "1.5rem", lg:"2rem"},mx: 1 }}>
+              <IconButton
+                href="#"
+                color="inherit"
+                sx={{ fontSize: { xs: "1.5rem", lg: "2rem" }, mx: 1 }}
+              >
                 <Facebook fontSize="large" />
               </IconButton>
-              <IconButton href="#" color="inherit" sx={{fontSize: { xs: "1.5rem", lg:"2rem"},mx: 1 }}>
+              <IconButton
+                href="#"
+                color="inherit"
+                sx={{ fontSize: { xs: "1.5rem", lg: "2rem" }, mx: 1 }}
+              >
                 <Twitter fontSize="large" />
               </IconButton>
-              <IconButton href="#" color="inherit" sx={{fontSize: { xs: "1.5rem", lg:"2rem"},mx: 1 }}>
+              <IconButton
+                href="#"
+                color="inherit"
+                sx={{ fontSize: { xs: "1.5rem", lg: "2rem" }, mx: 1 }}
+              >
                 <LinkedIn fontSize="large" />
               </IconButton>
             </Box>
           </Grid>
         </Grid>
         <Divider sx={{ my: 4, backgroundColor: "rgba(255, 255, 255, 0.2)" }} />
-        <Typography variant="body2" sx={{fontSize: { xs: "1.5rem", lg:"2rem"},opacity: 0.8 }}>
-          &copy; {new Date().getFullYear()} ERA Info Solution. All rights reserved.
+        <Typography
+          variant="body2"
+          sx={{ fontSize: { xs: "1.5rem", lg: "2rem" }, opacity: 0.8 }}
+        >
+          &copy; {new Date().getFullYear()} ERA Info Solution. All rights
+          reserved.
         </Typography>
       </Container>
     </Box>
