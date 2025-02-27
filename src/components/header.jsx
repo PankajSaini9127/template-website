@@ -1,29 +1,186 @@
 import React from "react";
+import { Box, Container, Typography, Button, useTheme } from "@mui/material";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 export const Header = (props) => {
+  const theme = useTheme();
+
   return (
-    <header id="header">
-      <div className="intro">
-        <div className="overlay">
-          <div className="container">
-            <div className="row">
-              <div className="col-md-8 col-md-offset-2 intro-text">
-                <h1>
-                  {props.data ? props.data.title : "Loading"}
-                  <span></span>
-                </h1>
-                <p>{props.data ? props.data.paragraph : "Loading"}</p>
-                <a
-                  href="#features"
-                  className="btn btn-custom btn-lg page-scroll"
-                >
-                  Learn More
-                </a>{" "}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
+    <Box
+      component="header"
+      id="header"
+      sx={{
+        position: "relative",
+        height: "100vh",
+        display: "flex",
+        alignItems: "center",
+        backgroundImage: "url('/img/intro-bg.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        color: "white",
+        "&::before": {
+          content: '""',
+          position: "absolute",
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: "rgba(0, 0, 0, 0.6)",
+          backgroundImage: `linear-gradient(135deg, ${theme.palette.primary.dark}80 0%, ${theme.palette.secondary.dark}80 100%)`,
+          zIndex: 1
+        }
+      }}
+    >
+      <Container
+        maxWidth="lg"
+        sx={{
+          position: "relative",
+          zIndex: 2,
+          textAlign: "center",
+          py: 8
+        }}
+      >
+        <Box
+          sx={{
+            maxWidth: 800,
+            mx: "auto",
+            px: { xs: 2, md: 4 }
+          }}
+        >
+          <Typography
+            variant="h1"
+            component="h1"
+            sx={{
+              fontSize: { xs: "2.5rem", sm: "3.5rem", md: "4.5rem" },
+              fontWeight: 800,
+              mb: 3,
+              textShadow: "0 2px 4px rgba(0,0,0,0.5)",
+              position: "relative",
+              display: "inline-block",
+              "&::after": {
+                content: '""',
+                display: "block",
+                width: "70px",
+                height: "4px",
+                backgroundColor: theme.palette.secondary.main,
+                margin: "20px auto 0",
+                borderRadius: "2px"
+              }
+            }}
+          >
+            {props.data ? props.data.title : "Welcome to Your Company"}
+          </Typography>
+
+          <Typography
+            variant="h5"
+            component="p"
+            sx={{
+              fontSize: { xs: "1.1rem", md: "1.3rem" },
+              fontWeight: 400,
+              lineHeight: 1.6,
+              mb: 6,
+              maxWidth: "700px",
+              mx: "auto",
+              opacity: 0.9
+            }}
+          >
+            {props.data
+              ? props.data.paragraph
+              : "We provide innovative solutions to transform your business. Discover how our services can help you achieve your goals and stay ahead of the competition."}
+          </Typography>
+
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: { xs: "column", sm: "row" },
+              justifyContent: "center",
+              gap: 2
+            }}
+          >
+            <Button
+              variant="contained"
+              color="secondary"
+              size="large"
+              href="#features"
+              sx={{
+                px: 4,
+                py: 1.5,
+                fontSize: "1.1rem",
+                fontWeight: 600,
+                textTransform: "none",
+                borderRadius: "30px",
+                boxShadow: "0 4px 14px rgba(0,0,0,0.25)",
+                transition: "all 0.3s ease",
+                "&:hover": {
+                  transform: "translateY(-3px)",
+                  boxShadow: "0 6px 20px rgba(0,0,0,0.3)"
+                }
+              }}
+            >
+              Learn More
+            </Button>
+            <Button
+              variant="outlined"
+              color="inherit"
+              size="large"
+              href="#contact"
+              sx={{
+                px: 4,
+                py: 1.5,
+                fontSize: "1.1rem",
+                fontWeight: 600,
+                textTransform: "none",
+                borderRadius: "30px",
+                borderWidth: "2px",
+                "&:hover": {
+                  borderWidth: "2px",
+                  backgroundColor: "rgba(255,255,255,0.1)"
+                }
+              }}
+            >
+              Contact Us
+            </Button>
+          </Box>
+        </Box>
+      </Container>
+
+      <Box
+        sx={{
+          position: "absolute",
+          bottom: "30px",
+          left: "50%",
+          transform: "translateX(-50%)",
+          zIndex: 2,
+          animation: "bounce 2s infinite",
+          "@keyframes bounce": {
+            "0%, 20%, 50%, 80%, 100%": {
+              transform: "translate(-50%, 0)"
+            },
+            "40%": {
+              transform: "translate(-50%, -20px)"
+            },
+            "60%": {
+              transform: "translate(-50%, -10px)"
+            }
+          }
+        }}
+      >
+        <Button
+          href="#features"
+          color="inherit"
+          sx={{
+            minWidth: "auto",
+            borderRadius: "50%",
+            p: 1,
+            backgroundColor: "rgba(255,255,255,0.2)",
+            "&:hover": {
+              backgroundColor: "rgba(255,255,255,0.3)"
+            }
+          }}
+        >
+          <KeyboardArrowDownIcon fontSize="large" />
+        </Button>
+      </Box>
+    </Box>
   );
 };
