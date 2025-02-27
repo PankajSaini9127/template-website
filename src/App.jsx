@@ -13,6 +13,7 @@ import SmoothScroll from "smooth-scroll";
 import "./App.css";
 
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { Footer } from "./components/footer";
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
   speed: 1000,
@@ -52,6 +53,7 @@ const theme = createTheme({
       {/* <Testimonials data={landingPageData.Testimonials} /> */}
       {/* <Team data={landingPageData.Team} /> */}
       <Contact data={landingPageData.Contact} />
+      <Footer/>
     </div>
     </ThemeProvider>
   );

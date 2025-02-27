@@ -85,7 +85,7 @@ export const Navigation = () => {
         position="fixed"
         sx={{
           backgroundColor: scrolled
-            ? theme.palette.primary.main
+            ? "white"
             : "transparent",
           boxShadow: scrolled ? "0px 4px 10px rgba(0, 0, 0, 0.2)" : "none",
           transition: "all 0.3s ease-in-out",
@@ -96,7 +96,7 @@ export const Navigation = () => {
             sx={{ display: "flex", justifyContent: "space-between", py: 1 }}
           >
             <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-              <Avatar
+              {/* <Avatar
                 sx={{
                   bgcolor: theme.palette.secondary.main,
                   display: { xs: "none", sm: "flex" },
@@ -104,17 +104,14 @@ export const Navigation = () => {
                   height: 40,
                 }}
               >
-                YC
-              </Avatar>
-              <Box
-                component="img"
-                src="/img/logo.png" // Replace with your logo path
-                alt="Your Company Logo"
-                sx={{
-                  height: { xs: 40, md: 60 }, // Adjust size for different screens
-                  cursor: "pointer",
-                }}
-              />
+                ERA
+              </Avatar> */}
+      <svg width="100%" height="100" viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+  <text x="5" y="60" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="blue">Era</text>
+  <text x="60" y="60" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="orange">Info</text>
+  <text x="120" y="60" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="blue">Solution</text>
+</svg>
+
             </Box>
 
             <IconButton
@@ -134,11 +131,12 @@ export const Navigation = () => {
                   color="inherit"
                   href={item.href}
                   sx={{
-                    fontSize: "1rem",
-                    fontWeight: "500",
+                    fontSize: "16px",
+                    fontWeight: "600",
                     textTransform: "none",
                     borderRadius: "8px",
-                    px: 2,
+                    color: "#3112d5",
+                    px: 1,
                     transition: "0.3s",
                     "&:hover": {
                       backgroundColor: `${theme.palette.primary.light}20`,
