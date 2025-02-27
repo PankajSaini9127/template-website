@@ -55,7 +55,7 @@ export const Contact = () => {
         backgroundImage: "url(https://source.unsplash.com/1600x900/?contact,office)",
         backgroundSize: "cover",
         backgroundPosition: "center",
-        py: 10,
+        py: { xs: 10, md: 8 },
         px: 2,
       }}
     >
@@ -63,20 +63,20 @@ export const Contact = () => {
         <Paper elevation={5} sx={{ p: 5, borderRadius: 3, backgroundColor: "rgba(255,255,255,0.9)" }}>
           <Grid container spacing={4} alignItems="center">
             <Grid item xs={12} md={6}>
-              <Typography variant="h4" fontWeight={700} gutterBottom>
+              <Typography variant="h4" sx={{fontSize: { xs: "2rem", sm: "2.5rem", md: "3rem" }}} fontWeight={700} gutterBottom>
                 Get In Touch
               </Typography>
-              <Typography variant="body1" color="text.secondary" mb={3}>
+              <Typography variant="body1" color="text.secondary" mb={3} sx={{fontSize: { xs: "1rem", lg:"1.5rem" }}}>
                 Fill out the form below, and we’ll get back to you soon.
               </Typography>
               <Box>
-                <Typography display="flex" alignItems="center" mb={2}>
+                <Typography display="flex" alignItems="center" mb={2} sx={{fontSize: { xs: "0.8rem", lg:"1.2rem" }}}>
                   <PhoneIcon color="primary" sx={{ mr: 1 }} /> +1 234 567 890
                 </Typography>
-                <Typography display="flex" alignItems="center" mb={2}>
+                <Typography display="flex" alignItems="center" mb={2} sx={{fontSize: { xs: "0.8rem", lg:"1.2rem" }}}>
                   <EmailIcon color="primary" sx={{ mr: 1 }} /> contact@example.com
                 </Typography>
-                <Typography display="flex" alignItems="center">
+                <Typography display="flex" alignItems="center" sx={{fontSize: { xs: "0.8rem", lg:"1.2rem" }}}>
                   <ContactMailIcon color="primary" sx={{ mr: 1 }} /> 1234 Business Street, City, Country
                 </Typography>
               </Box>
@@ -89,6 +89,7 @@ export const Contact = () => {
                       fullWidth
                       label="Name"
                       name="name"
+                      sx={{fontSize: { xs: "0.8rem", lg:"1.2rem" }}}
                       value={formData.name}
                       onChange={handleChange}
                       error={!!errors.name}
@@ -100,6 +101,7 @@ export const Contact = () => {
                       fullWidth
                       label="Email"
                       name="email"
+                      sx={{fontSize: { xs: "0.8rem", lg:"1.2rem" }}}
                       value={formData.email}
                       onChange={handleChange}
                       error={!!errors.email}
@@ -111,6 +113,7 @@ export const Contact = () => {
                       fullWidth
                       label="Message"
                       name="message"
+                      sx={{fontSize: { xs: "0.8rem", lg:"1.2rem" }}}
                       multiline
                       rows={4}
                       value={formData.message}
@@ -121,7 +124,7 @@ export const Contact = () => {
                   </Grid>
                 </Grid>
                 <Box mt={3} textAlign="center">
-                  <Button type="submit" variant="contained" color="primary" size="large">
+                  <Button type="submit" variant="contained" color="primary" size="large" sx={{fontSize: { xs: "0.8rem", lg:"1.2rem" }}}>
                     Send Message
                   </Button>
                 </Box>

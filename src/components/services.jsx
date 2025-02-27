@@ -66,7 +66,7 @@ export const Services = () => {
     <Box
       id="services"
       sx={{
-        py: { xs: 10, md: 16 },
+        py: { xs: 10, md: 8 },
         backgroundColor: theme.palette.grey[50]
       }}
     >
@@ -77,6 +77,7 @@ export const Services = () => {
           sx={{
             textAlign: "center",
             fontWeight: 700,
+            fontSize: { xs: "2rem", sm: "2.5rem", md: "3rem" },
             mb: 3,
             position: "relative",
             "&::after": {
@@ -96,7 +97,7 @@ export const Services = () => {
         </Typography>
         <Typography
           variant="body1"
-          sx={{ textAlign: "center", maxWidth: 800, mx: "auto", mb: 6 }}
+          sx={{ textAlign: "center", maxWidth: 800, mx: "auto", mb: 6, fontSize: { xs: "1rem", lg:"1.5rem" }, }}
         >
           We provide cutting-edge development solutions, from custom software
           and mobile apps to web development and cloud integration. Our
@@ -120,13 +121,13 @@ export const Services = () => {
                   }
                 }}
               >
-                <ListItemIcon sx={{ display: "flex", justifyContent: "center", mb: 2 }}>
+                <ListItemIcon sx={{ display: "flex", justifyContent: "center", mb: 2,"& svg":{ height:{ xs: "2.5rem", lg:"3.5rem" },width:{ xs: "2.5rem", lg:"3.5rem" }} }}>
                   {iconMapping[d.icon]}
                 </ListItemIcon>
-                <Typography variant="h5" sx={{ fontWeight: 600, mb: 1 }}>
+                <Typography variant="h5" sx={{ fontWeight: 600, mb: 1 , fontSize: { xs: "1.5rem", lg:"2rem" },}}>
                   {d.name}
                 </Typography>
-                <Typography variant="body2" >
+                <Typography variant="body2" sx={{ fontSize: { xs: "1rem", lg:"1.5rem" }}} >
                   {d.text}
                 </Typography>
               </Paper>

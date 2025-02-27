@@ -25,7 +25,7 @@ export const Header = (props) => {
           left: 0,
           right: 0,
           bottom: 0,
-          backgroundColor: "rgba(0, 0, 0, 0.6)",
+          // backgroundColor: "rgba(0, 0, 0, 0.27)",
           backgroundImage: `linear-gradient(135deg, ${theme.palette.primary.dark}80 0%, ${theme.palette.secondary.dark}80 100%)`,
           zIndex: 1
         }
@@ -49,14 +49,15 @@ export const Header = (props) => {
         >
           <Typography
             variant="h1"
-            component="h1"
             sx={{
-              fontSize: { xs: "2.5rem", sm: "3.5rem", md: "4.5rem" },
-              fontWeight: 800,
+              fontSize: { xs: "2.5rem", sm: "3.5rem", md: "4.5rem",lg:"6.5rem" },
+              fontWeight: 700,
               mb: 3,
               textShadow: "0 2px 4px rgba(0,0,0,0.5)",
               position: "relative",
-              display: "inline-block",
+              // background: `linear-gradient(135deg, ${theme.palette.primary.main} 0%, ${theme.palette.secondary.main} 100%)`,
+              // WebkitBackgroundClip: "text",
+              // WebkitTextFillColor: "transparent",
               "&::after": {
                 content: '""',
                 display: "block",
@@ -73,9 +74,8 @@ export const Header = (props) => {
 
           <Typography
             variant="h5"
-            component="p"
             sx={{
-              fontSize: { xs: "1.1rem", md: "1.3rem" },
+              fontSize: { xs: "1.1rem", md: "1.3rem",lg:"2rem" },
               fontWeight: 400,
               lineHeight: 1.6,
               mb: 6,
@@ -105,15 +105,15 @@ export const Header = (props) => {
               sx={{
                 px: 4,
                 py: 1.5,
-                fontSize: "1.1rem",
+                fontSize: { xs: "1.1rem", lg:"1.5rem" },
                 fontWeight: 600,
                 textTransform: "none",
-                borderRadius: "30px",
-                boxShadow: "0 4px 14px rgba(0,0,0,0.25)",
+                borderRadius: theme.shape.borderRadius,
+                boxShadow: theme.shadows[4],
                 transition: "all 0.3s ease",
                 "&:hover": {
                   transform: "translateY(-3px)",
-                  boxShadow: "0 6px 20px rgba(0,0,0,0.3)"
+                  boxShadow: theme.shadows[6]
                 }
               }}
             >
@@ -127,10 +127,10 @@ export const Header = (props) => {
               sx={{
                 px: 4,
                 py: 1.5,
-                fontSize: "1.1rem",
+                fontSize: { xs: "1.1rem", lg:"1.5rem" },
                 fontWeight: 600,
                 textTransform: "none",
-                borderRadius: "30px",
+                borderRadius: theme.shape.borderRadius,
                 borderWidth: "2px",
                 "&:hover": {
                   borderWidth: "2px",

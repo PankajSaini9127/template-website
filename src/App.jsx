@@ -12,8 +12,9 @@ import JsonData from "./data/data.json";
 import SmoothScroll from "smooth-scroll";
 import "./App.css";
 
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import {  ThemeProvider } from '@mui/material/styles';
 import { Footer } from "./components/footer";
+import theme from "./utils/theme";
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
   speed: 1000,
@@ -26,20 +27,6 @@ const App = () => {
     setLandingPageData(JsonData);
   }, []);
 
-  // Create a theme instance (you can customize this)
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: '#3f51b5', // Customize your primary color
-    },
-    secondary: {
-      main: '#f50057', // Customize your secondary color
-    },
-  },
-  typography: {
-    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
-  },
-});
 
   return (
     <ThemeProvider theme={theme}>

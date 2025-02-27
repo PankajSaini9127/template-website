@@ -53,7 +53,7 @@ export const Features = (props) => {
     <Box
       id="features"
       sx={{
-        py: { xs: 10, md: 16 },
+        py: { xs: 10, md: 8 },
         backgroundColor: "white",
         position: "relative",
         overflow: "hidden",
@@ -84,7 +84,7 @@ export const Features = (props) => {
             variant="overline"
             component="p"
             sx={{
-              fontSize: "0.9rem",
+              fontSize:{ xs: "1rem", lg:"1.5rem" },
               fontWeight: 600,
               letterSpacing: 2,
               color: theme.palette.secondary.main,
@@ -114,7 +114,7 @@ export const Features = (props) => {
           <Typography
             variant="subtitle1"
             sx={{
-              fontSize: "1.1rem",
+              fontSize:{ xs: "1.5rem", lg:"2.5rem" },
               color: theme.palette.text.secondary,
               mb: 4,
               lineHeight: 1.6
@@ -176,6 +176,7 @@ export const Features = (props) => {
                 <Typography
                   variant="h5"
                   component="h3"
+                  fontSize={{ xs: "1rem", lg:"2rem" }}
                   sx={{
                     fontWeight: 700,
                     mb: 2,
@@ -187,6 +188,7 @@ export const Features = (props) => {
                 
                 <Typography
                   variant="body1"
+                  fontSize={{ xs: "0.8rem", lg:"1.5rem" }}
                   sx={{
                     color: theme.palette.text.secondary,
                     lineHeight: 1.6,
@@ -207,6 +209,7 @@ export const Features = (props) => {
                       fontWeight: 600,
                       p: 0,
                       opacity: 0.8,
+                      fontSize:{ xs: "1rem", lg:"1.5rem" },
                       transform: "translateX(-5px)",
                       transition: "all 0.3s ease",
                       "&:hover": {

@@ -41,7 +41,7 @@ export const About = (props) => {
     <Box
       id="about"
       sx={{
-        py: { xs: 10, md: 16 },
+        py: { xs: 10, md: 8 },
         position: "relative",
         backgroundColor: theme.palette.grey[50],
         overflow: "hidden"
@@ -128,7 +128,7 @@ export const About = (props) => {
                 variant="overline"
                 component="p"
                 sx={{
-                  fontSize: "0.9rem",
+                  fontSize: { xs: "1rem", lg:"1.5rem" },
                   fontWeight: 600,
                   letterSpacing: 2,
                   color: theme.palette.primary.main,
@@ -164,7 +164,7 @@ export const About = (props) => {
               <Typography
                 variant="body1"
                 sx={{
-                  fontSize: "1.1rem",
+                  fontSize: { xs: "1rem", lg:"1.5rem" },
                   color: theme.palette.text.secondary,
                   mb: 4,
                   lineHeight: 1.7
@@ -191,15 +191,16 @@ export const About = (props) => {
                       <ListItem 
                         key={`why-${index}`} 
                         disableGutters 
-                        sx={{ py: 0.75 }}
+                        sx={{ py: 0.50 }}
                       >
-                        <ListItemIcon sx={{ minWidth: 40 }}>
+                        <ListItemIcon sx={{ minWidth: 25 }}>
                           <CheckCircleIcon color="secondary" />
                         </ListItemIcon>
                         <ListItemText
                           primary={item}
                           primaryTypographyProps={{
-                            fontWeight: 500
+                            fontWeight: 500,
+                            fontSize: { xs: "1rem", lg:"1.5rem" }, 
                           }}
                         />
                       </ListItem>
@@ -212,15 +213,16 @@ export const About = (props) => {
                       <ListItem 
                         key={`why2-${index}`} 
                         disableGutters 
-                        sx={{ py: 0.75 }}
+                        sx={{ py: 0.50 }}
                       >
-                        <ListItemIcon sx={{ minWidth: 40 }}>
+                        <ListItemIcon sx={{ minWidth: 25 }}>
                           <CheckCircleIcon color="secondary" />
                         </ListItemIcon>
                         <ListItemText
                           primary={item}
                           primaryTypographyProps={{
-                            fontWeight: 500
+                            fontWeight: 500,
+                            fontSize: { xs: "1rem", lg:"1.5rem" }, 
                           }}
                         />
                       </ListItem>
