@@ -39,7 +39,7 @@ export const Footer = () => {
           <Grid item xs={12} sm={8}>
             <Box
               component="img"
-              src="/img/eralogo.png" // Change this to your actual image path
+              src="/img/ERA LOGO.png" // Change this to your actual image path
               alt="Era Info Solution"
               sx={{
                 width: { xs: "120px", lg: "180px" }, // Responsive width

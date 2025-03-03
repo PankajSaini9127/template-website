@@ -81,7 +81,7 @@ export const Navigation = () => {
           >
             <Box
               component="img"
-              src="/img/eralogo.png" // Change this to your actual image path
+              src="/img/ERA LOGO.png" // Change this to your actual image path
               alt="Era Info Solution"
               sx={{
                 width: { xs: "60px", lg: "100px" }, // Responsive width

@@ -17,18 +17,7 @@ export const Header = (props) => {
         backgroundImage: "url('/img/intro-bg.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
-        color: "white",
-        "&::before": {
-          content: '""',
-          position: "absolute",
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          // backgroundColor: "rgba(0, 0, 0, 0.27)",
-          backgroundImage: `linear-gradient(135deg, ${theme.palette.primary.dark}80 0%, ${theme.palette.secondary.dark}80 100%)`,
-          zIndex: 1
-        }
+        color: "white"
       }}
     >
       <Container
@@ -50,14 +39,11 @@ export const Header = (props) => {
           <Typography
             variant="h1"
             sx={{
-              fontSize: { xs: "2.5rem", sm: "3.5rem", md: "4.5rem",lg:"6.5rem" },
+              fontSize: { xs: "2.5rem", sm: "3.5rem", md: "4.5rem", lg: "6.5rem" },
               fontWeight: 700,
               mb: 3,
               textShadow: "0 2px 4px rgba(0,0,0,0.5)",
               position: "relative",
-              // background: `linear-gradient(135deg, ${theme.palette.primary.main} 0%, ${theme.palette.secondary.main} 100%)`,
-              // WebkitBackgroundClip: "text",
-              // WebkitTextFillColor: "transparent",
               "&::after": {
                 content: '""',
                 display: "block",
@@ -75,7 +61,7 @@ export const Header = (props) => {
           <Typography
             variant="h5"
             sx={{
-              fontSize: { xs: "1.1rem", md: "1.3rem",lg:"2rem" },
+              fontSize: { xs: "1.1rem", md: "1.3rem", lg: "2rem" },
               fontWeight: 400,
               lineHeight: 1.6,
               mb: 6,
@@ -105,7 +91,7 @@ export const Header = (props) => {
               sx={{
                 px: 4,
                 py: 1.5,
-                fontSize: { xs: "1.1rem", lg:"1.5rem" },
+                fontSize: { xs: "1.1rem", lg: "1.5rem" },
                 fontWeight: 600,
                 textTransform: "none",
                 borderRadius: theme.shape.borderRadius,
@@ -127,7 +113,7 @@ export const Header = (props) => {
               sx={{
                 px: 4,
                 py: 1.5,
-                fontSize: { xs: "1.1rem", lg:"1.5rem" },
+                fontSize: { xs: "1.1rem", lg: "1.5rem" },
                 fontWeight: 600,
                 textTransform: "none",
                 borderRadius: theme.shape.borderRadius,
